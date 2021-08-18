@@ -9,24 +9,24 @@ export default class NewBlogPost extends Component {
     super(props);
     this.state = {
       content: "",
-      cover: "linkurl hardcoded",
+      cover: "",
       readTime: {
         value: 2,
         unit: "minute",
       },
       author: {
-        name: "hardCoded",
-        avatar: "hardCoded",
+        name: "",
+        avatar: "",
       },
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(value, bodyContent) {
+  handleChange(value, key) {
     this.setState({
       ...this.state,
-      [bodyContent]: value,
+      [key]: value,
     });
     console.log(value);
   }
